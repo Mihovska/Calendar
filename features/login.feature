@@ -11,7 +11,7 @@ Feature: Login to my Calendar
    And I press "Next"
    And I fill in "Password" with "Nighthawk_f22"
    And I press "Next"
-   Then I should be on my Calendar home page
+   Then I should be redirected to my profile page
 
 
  Scenario: Login with invalid Email credentials
