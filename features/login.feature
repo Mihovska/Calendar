@@ -3,11 +3,10 @@ Feature: Login to my Calendar
  As a registered user
  I want to sign in to my Google Calendar
  So that I can check events and meetings
-
- Background:
-   Given I am on the Google Calendar login page
+  
 
  Scenario: Login with valid credentials
+  Given I am on the Google Calendar login page
    When I fill in "Email" with "apptestautomation7@gmail.com"
    And I press "Next"
    And I fill in "Password" with "Nighthawk_f22"
@@ -16,12 +15,14 @@ Feature: Login to my Calendar
 
 
  Scenario: Login with invalid Email credentials
+   Given I am on the Google Calendar login page
     When I fill in "Email" with "test@gmail.com"
     And I press "Next"
     Then I should see error message
 
   
  Scenario: Login with invalid Password credentials
+  Given I am on the Google Calendar login page
    When I fill in "Email" with "apptestautomation7@gmail.com"
    And I press "Next"
    And I fill in "Password" with "Night"
