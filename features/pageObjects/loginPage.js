@@ -1,13 +1,13 @@
 import { config } from '../wdio.conf';
 
-const USERNAME = '#username';
-const PASSWORD = '#password';
-const SUBMIT = '#submitButton';
+const USERNAME = '#identifierID';
+const PASSWORD = '.whsOnd';
+const SUBMIT = '#identifierNext';
 
 
 class LoggingPage {
     goToLoginPage() {
-        return browser.url('/login/');
+        return browser.url('/http://calendar.google.com');
     }
 
     login(username, password) {
@@ -20,6 +20,10 @@ class LoggingPage {
         return browser
             .waitForVisible(USERNAME)
             .setValue(USERNAME, username);
+    }
+
+    submit() {
+        return browser.click(SUBMIT);
     }
      
     typePassword(password) {
