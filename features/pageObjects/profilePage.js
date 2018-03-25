@@ -2,7 +2,7 @@ import { config } from '../wdio.conf';
  
 class MyProfilePage {
     getMyProfilePageUrl() {
-        return browser.getUrl('https://calendar.google.com/calendar/r');
+        return browser.getUrl();
 }
 }
 export default MyProfilePage;
