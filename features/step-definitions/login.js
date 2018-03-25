@@ -1,9 +1,9 @@
-import chai from 'chai';
-import chaiAsPromised from 'chai-as-promised';
+var chai = require('chai');
+var chaiAsPromised = require('chai-as-promised');
 chai.use(chaiAsPromised);
 chai.should();
-import LoginPage from '../pageObjects/LoginPage';
-import MyProfilePage from '../pageObjects/MyProfilePage';
+var LoginPage = require('../pageObjects/LoginPage');
+var MyProfilePage = require('../pageObjects/MyProfilePage');
  
 const loginPage = new LoginPage();
 const profilePage = new MyProfilePage();
